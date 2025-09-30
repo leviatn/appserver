@@ -1,0 +1,218 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #F7EFE5;
+  color: #5C4033;
+}
+
+header {
+  background-color: #D8CAB8;
+  padding: 20px;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+  color: #5C4033;
+  font-size: 2.5rem;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0 0;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  background-color: #A47551;
+  padding: 8px 14px;
+  border-radius: 20px;
+  transition: background-color 0.3s;
+}
+
+nav a:hover {
+  background-color: #8B5C3C;
+}
+
+.carrusel {
+  width: 800px;
+  height: 300px;
+  overflow: hidden;
+  margin: auto;
+  position: relative;
+}
+
+.slides {
+  display: flex;
+  animation: deslizar 16s infinite;
+}
+
+.slides img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+@keyframes deslizar {
+  0%   { transform: translateX(0); }
+  20%  { transform: translateX(0); }
+
+  25%  { transform: translateX(-800px); }
+  45%  { transform: translateX(-800px); }
+
+  50%  { transform: translateX(-1600px); }
+  70%  { transform: translateX(-1600px); }
+
+  75%  { transform: translateX(-2400px); }
+  95%  { transform: translateX(-2400px); }
+
+  100% { transform: translateX(0); }
+}
+
+.bienvenida {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #FFF8F0;
+}
+
+.bienvenida h2 {
+  color: #A47551;
+  font-size: 2rem;
+}
+
+.galeria {
+  padding: 40px 20px;
+  background-color: #F7EFE5;
+  text-align: center;
+}
+
+.tarjetas {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.card {
+  background-color: #FFFFFF;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  width: 200px;
+  padding: 15px;
+  text-align: center;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.card h3 {
+  margin: 10px 0 5px;
+  color: #5C4033;
+}
+
+.card button {
+  background-color: #A47551;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.card button:hover {
+  background-color: #8B5C3C;
+}
+
+footer {
+  background-color: #D8CAB8;
+  color: #5C4033;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+}
+
+@media (max-width: 768px) {
+  .tarjetas {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+
+.menu-icon {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 24px;
+  cursor: pointer;
+  background-color: #A47551;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 6px;
+  z-index: 1000;
+}
+
+.side-menu {
+  position: absolute;
+  top: 60px;
+  left: 20px;
+  background-color: #FFF8F0;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+  border-radius: 10px;
+  padding: 10px;
+  display: none;
+  flex-direction: column;
+  z-index: 999;
+}
+
+.side-menu a {
+  text-decoration: none;
+  color: #5C4033;
+  padding: 10px;
+  display: block;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+.side-menu a:hover {
+  background-color: #ffe7ef;
+}
+
+.usuario-box {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #f5f5f5;
+    padding: 8px 12px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: Arial, sans-serif;
+    box-shadow: 0px 2px 5px rgba(0,0,0,0.2);
+    cursor: pointer;
+}
+.usuario-box img {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+@keyframes fadeIn {
+  from {opacity: 0; transform: scale(0.9);}
+  to {opacity: 1; transform: scale(1);}
+}
